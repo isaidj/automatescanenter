@@ -29,6 +29,7 @@ def copy_clipboard(text):
         # Simula presionar las teclas "command + v"
         pyautogui.hotkey("command", "v")
 
+    pyautogui.sleep(1.5)
     pyautogui.press("enter")
 
 
