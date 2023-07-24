@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+qrcode = "*"
+pillow = "*"
+eventlet = "*"
+cryptography = "*"
+pyautogui = "*"
+cx-freeze = "*"
+dnspython = "*"
+python-socketio = {version = "*", extras = ["asyncio_client"]}
+python-engineio = "*"
+gevent = "*"
+flask = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
