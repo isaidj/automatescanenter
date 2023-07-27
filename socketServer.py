@@ -1,6 +1,10 @@
+import os
+
+os.environ["EVENTLET_HUB"] = "LIBEVENT_NOPOLL"
+
 import eventlet
-import socket
 import socketio
+import socket
 import pyautogui
 import pyperclip
 

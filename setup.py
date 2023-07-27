@@ -2,7 +2,7 @@ import sys
 from cx_Freeze import setup, Executable
 
 # Reemplaza 'nombre_del_script.py' con el nombre de tu script principal
-script_file = "socketServer.py"
+script_file = "app.py"
 
 # Opciones de configuración para el ejecutable
 build_exe_options = {
