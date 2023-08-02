@@ -34,7 +34,7 @@ def copy_clipboard_async(text):
         else:
             # Simula presionar las teclas "command + v"
             pyautogui.hotkey("command", "v")
-        pyautogui.sleep(1.5)
+        pyautogui.sleep(0.2)
         pyautogui.press("enter")
 
     # Ejecuta la función en un hilo separado
@@ -53,7 +53,10 @@ def scan():
         print(data)
         print(data["data"])
         # Copia al portapapeles el código de barras de forma asíncrona
-        copy_clipboard_async(data["data"])
+
+        # remplace "-" for "'"
+        new_data = data["data"].replace("-", "'")
+        copy_clipboard_async(new_data)
         return "Operación exitosa", 200
     except Exception as e:
         return f"Error: {e}", 500
